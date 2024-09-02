@@ -1,7 +1,7 @@
 .scanner {
     overflow: hidden;
     height: 280px;
-    transition: height 0.5s;
+    transition: 0.2s;
 }
 
 .scanner h1 {
@@ -25,7 +25,6 @@
 }
 
 .scanner-form {
-    border: 2px dashed #777;
     height: 225px;
     display: flex;
     align-items: center;
@@ -33,6 +32,7 @@
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
+    border: 2px dashed #777;
 }
 
 .scanner-form img {
@@ -41,8 +41,8 @@
 }
 
 .scanner-form video {
-    height: 100%;
     width: 100%;
+    height: 100%;
     display: none;
 }
 
@@ -90,6 +90,7 @@
     border-radius: 5px;
 }
 
+/* Active Scanner */
 .scanner.active {
     height: 530px;
 }
@@ -98,6 +99,7 @@
     pointer-events: none;
 }
 
+/* Active Iamge */
 .scanner-form.active-img img {
     display: block;
 }
@@ -107,12 +109,13 @@
     display: none;
 }
 
+/* Active Video */
 .scanner-form.active-video video {
     display: block;
 }
 
 .scanner-form.active-video .content,
-.scanner-form.active-video video {
+.scanner-form.active-video img {
     display: none;
 }
 

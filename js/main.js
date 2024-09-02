@@ -1,18 +1,18 @@
-let generatorTab = document.querySelector('.nav-gene');
-let scannerTab = document.querySelector('.nav-scan');
-let generator = document.querySelector('.generator');
-let scanner = document.querySelector('.scanner');
+const generatorTab = document.querySelector('.nav-gene');
+const scannerTab = document.querySelector('.nav-scan');
 
 generatorTab.addEventListener('click', () => {
     generatorTab.classList.add('active');
     scannerTab.classList.remove('active');
-    generator.style.display = 'block';
-    scanner.style.display = 'none';
+
+    document.querySelector('.scanner').style.display = 'none';
+    document.querySelector('.generator').style.display = 'block';
 });
 
 scannerTab.addEventListener('click', () => {
-    generatorTab.classList.remove('active');
     scannerTab.classList.add('active');
-    generator.style.display = 'none';
-    scanner.style.display = 'block';
+    generatorTab.classList.remove('active');
+
+    document.querySelector('.scanner').style.display = 'block';
+    document.querySelector('.generator').style.display = 'none';
 });

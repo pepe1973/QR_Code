@@ -2,10 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -13,23 +10,10 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link
-            rel="shortcut icon"
-            href="./qr_proba.png"
-            type="image/x-icon"
-        />
-        <link
-            rel="stylesheet"
-            href="./css/stilus.css"
-        />
-        <link
-            rel="stylesheet"
-            href="./css/generator.css"
-        />
-        <link
-            rel="stylesheet"
-            href="./css/scanner.css"
-        />
+        <link rel="shortcut icon" href="./qr_proba.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/stilus.css" />
+        <link rel="stylesheet" href="./css/generator.css" />
+        <link rel="stylesheet" href="./css/scanner.css" />
         <title>Document</title>
     </head>
     <body>
@@ -46,18 +30,12 @@
                 <p>Kérem a szöveget, vagy a URL-t:</p>
 
                 <div class="generator-form">
-                    <input
-                        type="text"
-                        placeholder="Kérem a szöveget..."
-                    />
+                    <input type="text" placeholder="Kérem a szöveget..." />
                     <button>QR kód generálás</button>
                 </div>
 
                 <div class="generator-img">
-                    <img
-                        src="./qr_proba.png"
-                        alt="qr-kód"
-                    />
+                    <img src="./qr_proba.png" alt="qr-kód" />
                 </div>
 
                 <div class="generator-btn">
@@ -68,21 +46,14 @@
             </div>
 
             <!-- Scanner -->
-            <div
-                class="scanner"
-                style="display: none"
-            >
+            <div class="scanner" style="display: none">
                 <h1>
                     QR kód olvasása <i class="fa-solid fa-camera"></i>
                     <i class="fa-solid fa-circle-stop"></i>
                 </h1>
 
                 <form class="scanner-form">
-                    <input
-                        type="file"
-                        accept="image/*"
-                        hidden
-                    />
+                    <input type="file" accept="image/*" hidden />
                     <img
                         src="./qr_proba.png"
                         alt="qr-kód"
@@ -107,8 +78,8 @@
         </div>
         <script src="./js/main.js"></script>
         <script src="./js/generator.js"></script>
-        <script src="./js/scanner.js"></script>
-        <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-        <!-- <script src="./js/instascan.min.js"></script> -->
+        <script src="./js/masik.js"></script>
+        <!-- <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script> -->
+        <script src="./js/instascan.min.js"></script>
     </body>
 </html>
