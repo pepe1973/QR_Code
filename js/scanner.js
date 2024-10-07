@@ -82,6 +82,14 @@ camera.addEventListener('click', () => {
 copyBtn.addEventListener('click', () => {
     let text = textarea.textContent;
     navigator.clipboard.writeText(text);
+
+    fetch('http://localhost:3500', {
+        method: 'POST',
+        body: JSON.stringify(text),
+        Headers: {
+            'Content-Type': 'application/json',
+        },
+    });
 });
 
 // Close
