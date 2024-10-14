@@ -79,17 +79,29 @@ camera.addEventListener('click', () => {
 });
 
 // Copy
-copyBtn.addEventListener('click', () => {
+copyBtn.addEventListener('click', async () => {
     let text = textarea.textContent;
     navigator.clipboard.writeText(text);
 
-    fetch('http://localhost:3500', {
-        method: 'POST',
-        body: JSON.stringify(text),
-        Headers: {
-            'Content-Type': 'application/json',
-        },
-    });
+    try {
+        const response = await fetch('http://localhost:3500', {
+            method: 'POST',
+            body: JSON.stringify(text),
+            Headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        const valasz = await response.json();
+
+        if (response.ok) {
+            console.log(valasz.msg);
+        } else {
+            throw new Error(valasz);
+        }
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 // Close
